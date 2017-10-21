@@ -3,5 +3,10 @@ variable, blankLine
 */
 const blankLine = ' | | ';
 
-// Print the empty game board using JavaScript ES6 string interpolation 
-console.log(`This is what an empty board would look like: ${blankLine}`);
+// Use console.log to print a message
+console.log("This is what an empty board would look like: ");
+
+// Use console.log to log or print the blankLine constant three times
+console.log(blankLine);
+console.log(blankLine);
+console.log(blankLine);
