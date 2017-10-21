@@ -12,12 +12,12 @@ console.log(blankLine);
 /* Create a constant variable, guessLine, to hold a hard-coded row.
 guessLine represents what a board row will look like when a player guesses
 by "clicking" (selecting) the first square of this row. */
-const guessLine = '1 | | ';
+const guessLine = '1| | ';
 
 /* Create a constant variable, bombLine, to hold a hard-coded row.
 bombLine represents what a board row will look like when a player clicks
 and reveals a bomb. */
-const bombLine = ' | B | ';
+const bombLine = ' |B| ';
 
 /* Print what a board might look like during a game by first using console.log()
 to log a message. Then use console.log() to log or print guessLine, bombLine,
