@@ -1,7 +1,7 @@
 {
   "name": "babel-minesweeper-project",
   "version": "1.0.0",
-  "description": "Use Babel to transpile JavaScript ES6 to ES5",
+  "description": "Use Babel to transpile JavaScript ES6+ code (src) to ES5 (lib)",
   "main": "index.js",
   "dependencies": {
     "babel-preset-env": "^1.6.1",
