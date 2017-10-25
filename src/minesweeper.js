@@ -18,5 +18,12 @@ const board = [
 ];
 
 /* Print the formatted board array, by calling the printBoard() function, psssing
-in board as the argument to printBoard(). */ 
+in board as the argument to printBoard(). */
 printBoard(board);
+
+/* Practice setting values on the game board, manually. */
+board[0][1] = '1';
+board[2][2] = 'B';
+
+// Print (game) board again, using the function, printBoard(board).
+printBoard(board); 
