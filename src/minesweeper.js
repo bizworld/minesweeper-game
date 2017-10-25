@@ -17,7 +17,7 @@ const board = [
   [' ', ' ', ' ']
 ];
 
-/* Print the formatted board array, by calling the printBoard() function, psssing
+/* Print the formatted board array, by calling the printBoard() function, passing
 in board as the argument to printBoard(). */
 printBoard(board);
 
@@ -26,4 +26,4 @@ board[0][1] = '1';
 board[2][2] = 'B';
 
 // Print (game) board again, using the function, printBoard(board).
-printBoard(board); 
+printBoard(board);
