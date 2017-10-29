@@ -82,3 +82,12 @@ const printBoard = board => {
   log the formatted board to the console. */
   console.log(board.map(row => row.join(' | ')).join('\n'));
 };
+
+/* Test the functions to make sure they function as necessary.
+Create a variable, playerBoard, set to generatePlayerBoard() with 3 and 4 as its
+two parameters. */
+let playerBoard = generatePlayerBoard(3, 4);
+
+/* Create a variable, bombBoard, set to generateBombBoard() with 3, 4 and 5 as
+its three parameters. */
+let bombBoard = generateBombBoard(3, 4, 5);
