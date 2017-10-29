@@ -41,6 +41,35 @@ const generateBombBoard = (numberOfRows, numberOfColumns, numberOfBombs) => {
     // push the newly-created row into the board array
     board.push(row);
   }
+
+  /* numberOfBombsPlaced variable represents our bomb counter, starts at 0
+  (because there's no bomb placed yet at the start). */
+  let numberOfBombsPlaced = 0;
+
+  /*  Continue adding bombs to the board until our counter reaches
+  the specified number of bombs to the function (numberOfBombs).
+  Note: The code in your while loop has the potential to place bombs on top
+  of already existing bombs. This will be fixed with control flow. */
+  while (numberOfBombsPlaced < numberOfBombs) {
+    /* Generate a random location on the board (to place bombs randomly
+    on the board) by first creating a variable, randomRowIndex. (in while?). */
+    let randomRowIndex = Math.floor(Math.random() * numberOfRows);
+
+    /* Generate a random location on the board (to place bombs randomly
+    on the board) by first creating a variable, randomColumnIndex. (in while?). */
+    let randomColumnIndex = Math.floor(Math.random() * numberOfColumns);
+
+    /* Use the board variable and access the space at the generated
+    randomRowIndex and randomColumnIndex, set to 'B' (for bomb). */
+    board[randomRowIndex][randomColumnIndex] = 'B';
+
+    /* Increment the bomb counter, if not, the counter will stay set to 0 and
+    the while loop will run forever. */
+    numberOfBombsPlaced+=1;
+  }
+
+
+
   // return the bomb board, board
   return board;
 };
