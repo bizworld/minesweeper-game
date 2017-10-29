@@ -73,7 +73,7 @@ const generateBombBoard = (numberOfRows, numberOfColumns, numberOfBombs) => {
 };
 
 /*  Create a constant variable, printBoard, set to to an arrow function that
-accepts one parameter, board. review from 27/40 */
+accepts one parameter, board. */
 const printBoard = board => {
   /* This .map() method returns an array of formatted rows. Also, chain a
   .join() method call onto your .map() method call (with '\n' as the separator)
@@ -91,3 +91,18 @@ let playerBoard = generatePlayerBoard(3, 4);
 /* Create a variable, bombBoard, set to generateBombBoard() with 3, 4 and 5 as
 its three parameters. */
 let bombBoard = generateBombBoard(3, 4, 5);
+
+/* Print both boards to the console.
+Log a message to the console. */
+console.log('Player Board: ');
+
+/* Call the printBoard() function and pass in the playerBoard variable as the
+argument. */
+printBoard(playerBoard);
+
+// Log a message to the console.
+console.log('Bomb Board: ');
+
+/* Call the printBoard() function and pass in the bombBoard variable as the
+argument. */
+printBoard(bombBoard);
