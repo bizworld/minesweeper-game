@@ -68,8 +68,17 @@ const generateBombBoard = (numberOfRows, numberOfColumns, numberOfBombs) => {
     numberOfBombsPlaced+=1;
   }
 
-
-
   // return the bomb board, board
   return board;
+};
+
+/*  Create a constant variable, printBoard, set to to an arrow function that
+accepts one parameter, board. review from 27/40 */
+const printBoard = board => {
+  /* This .map() method returns an array of formatted rows. Also, chain a
+  .join() method call onto your .map() method call (with '\n' as the separator)
+  to join together the array of rows with new lines, placing each row on its own
+  line when printed. Then wrap this line of code with console.log() in order to
+  log the formatted board to the console. */
+  console.log(board.map(row => row.join(' | ')).join('\n'));
 };
