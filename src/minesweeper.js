@@ -59,13 +59,20 @@ const generateBombBoard = (numberOfRows, numberOfColumns, numberOfBombs) => {
     on the board) by first creating a variable, randomColumnIndex. (in while?). */
     let randomColumnIndex = Math.floor(Math.random() * numberOfColumns);
 
-    /* Use the board variable and access the space at the generated
-    randomRowIndex and randomColumnIndex, set to 'B' (for bomb). */
-    board[randomRowIndex][randomColumnIndex] = 'B';
+    /* An if statement to avoid duplicate bombs by checking if there's already
+    a bomb in a tile before placing it in that same tile. */
+    if (board[randomRowIndex][randomColumnIndex] !== 'B') {
 
-    /* Increment the bomb counter, if not, the counter will stay set to 0 and
-    the while loop will run forever. */
-    numberOfBombsPlaced+=1;
+      /* Use the board variable to access the space at the generated
+      randomRowIndex and randomColumnIndex, set to 'B' (for bomb). */
+      board[randomRowIndex][randomColumnIndex] = 'B';
+
+      /* Increment the bomb counter, if not, the counter will stay set to 0 and
+      the while loop will run forever. */
+      numberOfBombsPlaced++;
+    }
+
+
   }
 
   // return the bomb board, board
