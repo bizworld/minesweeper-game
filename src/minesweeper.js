@@ -72,12 +72,72 @@ const generateBombBoard = (numberOfRows, numberOfColumns, numberOfBombs) => {
       numberOfBombsPlaced++;
     }
 
-
   }
 
   // return the bomb board, board
   return board;
 };
+
+/* Build one of the main pieces of Minesweeper functionality: displaying the
+number of bombs adjacent to the flipped (or clicked) tile.
+Create a constant variable, getNumberOfNeighborBombs, set to an arrow function
+that accepts 3 parameters: bombBoard, rowIndex, columnIndex.
+This will calculate the number of bombs next to the square at the given rowIndex
+and columnIndex on the provided bombBoard. */
+const getNumberOfNeighborBombs = (bombBoard, rowIndex, columnIndex) => {
+  const neighborOffsets = [
+    [-1, -1],
+    [-1, 0],
+    [-1, 1],
+    [0, -1],
+    [0, 1],
+    [1, -1],
+    [1, 0],
+    [1, 1]
+  ];
+
+  const numberOfRows = bombBoard.length;
+  const numberOfColumns = bombBoard[0].length;
+
+  /* The numberOfBombs variable (initially set to 0) will be used to store the
+  number of bombs adjacent to the flipped tile. It should be created with `let`
+  not `const` since its value will change. */
+  let numberOfBombs = 0;
+
+  /* Call the .forEach() method on the neighborOffsets array.
+  The .forEach() requires a callback method. Pass one in as an arrow function.
+  The arrow function should take one parameter, offset. */
+  neighborOffsets.forEach(offset => {
+    /* Create neighborRowIndex and set to the sum of rowIndex and the first
+    element of offset. */
+    const neighborRowIndex = rowIndex + offset[0];
+
+    /* Create neighborColumnIndex and set to the sum of columnIndex and the
+    second element of offset. */
+    const neighborColumnIndex = columnIndex + offset[1];
+
+    /* Check if the row and column indices for neighboring tiles are valid
+    (for example, we don't want to check tiles that are "off the grid" and
+    don't exist). */
+    if (neighborRowIndex >= 0 && neighborRowIndex < numberOfRows &&
+    neighborColumnIndex >= 0 && neighborColumnIndex < numberOfColumns) {
+      /* Check if the tile at those indices (on the bombBoard) already contains
+      a bomb ('B'). */
+      if (bombBoard[neighborRowIndex][neighborColumnIndex] === 'B') {
+        // increment numberOfBombs if  both of these conditions are met
+        numberOfBombs++;
+      }
+
+    }
+
+  });
+
+  /* The purpose of this function is to return the number of bombs in an
+  adjacent neighbor. */
+  return numberOfBombs;
+
+};
+
 
 /*  Create a constant variable, printBoard, set to to an arrow function that
 accepts one parameter, board. */
