@@ -158,7 +158,7 @@ const flipTile = (playerBoard, bombBoard, rowIndex, columnIndex) => {
     Set the specified tile on playerBoard to calling getNumberOfNeighborBombs
     with bombBoard, rowIndex, and columnIndex as arguments. */
     playerBoard[rowIndex][columnIndex] = getNumberOfNeighborBombs(bombBoard,
-    rowIndex, columnIndex); 
+    rowIndex, columnIndex);
   }
 
 };
@@ -197,3 +197,18 @@ console.log('Bomb Board: ');
 /* Call the printBoard() function and pass in the bombBoard variable as the
 argument. */
 printBoard(bombBoard);
+
+/* Test out the functions, flipTile() and ....
+Call the flipTile() function. Pass in playerBoard, bombBoard, 0, and 0 as
+parameters.
+(This will flip the tile at location [0,0] on the player board, and also check
+the bomb board for bombs at the location). */
+flipTile(playerBoard, bombBoard, 0, 0);
+
+/* log a message that says 'Updated Player Board:'. This will help you read the
+output clearly. */
+console.log('Updated Player Board:');
+
+/* Print out the player board to see flipTile() in action.
+Call the printBoard() function and pass in playerBoard as an argument. */
+printBoard(playerBoard);
