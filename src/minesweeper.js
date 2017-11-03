@@ -138,6 +138,30 @@ const getNumberOfNeighborBombs = (bombBoard, rowIndex, columnIndex) => {
 
 };
 
+/* A function that will allow the user/player to flip a tile and to update that
+tile accordingly. It accepts 4 parameters: playerBoard, bombBoard, rowIndex,
+columnIndex. */
+const flipTile = (playerBoard, bombBoard, rowIndex, columnIndex) => {
+
+  /* Check to see if the specified tile in playerBoard
+  (using rowIndex and columnIndex) is not empty i.e. ' ' (already been flipped).
+  Also add an else if statement to check if there is a bomb, 'B' at the
+  specified tile on the bombBoard. */
+  if (playerBoard[rowIndex][columnIndex] !== ' ') {
+    return "This tile has already been flipped!";
+  } else if (bombBoard[rowIndex][columnIndex] === 'B') {
+    // Place a bomb on the player board by checking the bomb board (else if cond.)
+    playerBoard[rowIndex][columnIndex] = 'B';
+  } else {
+    /* Let the user flip the tile and then display the number of neighboring
+    bombs on that same tile.
+    Set the specified tile on playerBoard to calling getNumberOfNeighborBombs
+    with bombBoard, rowIndex, and columnIndex as arguments. */
+    playerBoard[rowIndex][columnIndex] = getNumberOfNeighborBombs(bombBoard,
+    rowIndex, columnIndex); 
+  }
+
+};
 
 /*  Create a constant variable, printBoard, set to to an arrow function that
 accepts one parameter, board. */
