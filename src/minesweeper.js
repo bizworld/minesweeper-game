@@ -1,6 +1,15 @@
 class Board {
-  
-
+  /* Add a constructor() method for the class, to be able to use the class later
+  (as an object)
+  The parameters represent the board size and the number of bombs. */ 
+  constructor(numberOfRows, numberOfColumns, numberOfBombs) {
+    // set an instance's properties.
+    this._numberOfBombs = numberOfBombs;
+    this._numberOfTiles = numberOfRows * numberOfColumns; // represents the size of the game board
+    // instance property with value set to a static method called on Board
+    this._playerBoard = Board.generatePlayerBoard(numberOfRows, numberOfColumns);
+    this._bombBoard = Board.generateBombBoard(numberOfRows, numberOfColumns, numberOfBombs);
+  }
 
 
 }
