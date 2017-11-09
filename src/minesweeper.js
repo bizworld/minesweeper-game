@@ -40,6 +40,10 @@ class Board {
       this._playerBoard[rowIndex][columnIndex] = this.getNumberOfNeighborBombs(rowIndex, columnIndex);
     }
 
+    /* Use the decrement operator to decrease the this._numberOfTiles instance
+    property by 1. */
+    this._numberOfTiles--;
+
   }
 
 
