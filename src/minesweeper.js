@@ -1,3 +1,16 @@
+class Board {
+  
+
+
+
+}
+
+
+
+
+
+
+
 /* Create a constant variable, generatePlayerBoard, to store a function that will
 generate a blank board of a given size to hold the player's guesses.
 This function will dynamically generate a player's board no matter the size. */
