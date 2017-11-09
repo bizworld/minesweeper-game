@@ -108,6 +108,14 @@ class Board {
 
   };
 
+  /* A way to inform the user that they've won the game.
+  A user wins when there are no non-bomb ("safe") tiles remaining to be flipped.
+  .hasSafeTiles() method will need to check the numberOfTiles on the board
+  vs. the numberOfBombs on the board. */
+  hasSafeTiles() {
+    // no need for an if statement, since the expression it's checking is truthy
+    return this._numberOfTiles !== this._numberOfBombs;
+  }
 
 
 
