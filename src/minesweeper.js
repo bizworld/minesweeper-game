@@ -1,7 +1,7 @@
 class Board {
   /* Add a constructor() method for the class, to be able to use the class later
   (as an object)
-  The parameters represent the board size and the number of bombs. */ 
+  The parameters represent the board size and the number of bombs. */
   constructor(numberOfRows, numberOfColumns, numberOfBombs) {
     // set an instance's properties.
     this._numberOfBombs = numberOfBombs;
@@ -11,6 +11,11 @@ class Board {
     this._bombBoard = Board.generateBombBoard(numberOfRows, numberOfColumns, numberOfBombs);
   }
 
+  /* Add a getter method, playerBoard() to the Borad class that returns or gets
+  an instance's player board. */
+  get playerBoard() {
+    return this._playerBoard;
+  }
 
 }
 
