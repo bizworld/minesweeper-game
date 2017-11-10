@@ -1,6 +1,13 @@
 /* The Game class utilizes the Board class by making calls to the methods in
 the Board class. */
 class Game {
+  /* To call Board methods, we'll have to create an instance of a Board inside
+  of the Game constructor. */
+  constructor(numberOfRows, numberOfColumns, numberOfBombs) {
+    /* instance property, this._board, set to an instance of Board, passing in
+    the Game constructor's parameters as arguments. */
+    this._board = new Board(numberOfRows, numberOfColumns, numberOfBombs);
+  }
 
 
 }
