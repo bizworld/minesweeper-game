@@ -272,41 +272,50 @@ class Board {
 
 
 
-/* Test the functions to make sure they function as necessary.
-Create a variable, playerBoard, set to generatePlayerBoard() with 3 and 4 as its
-two parameters. */
-let playerBoard = generatePlayerBoard(3, 4);
+// /* Test the functions to make sure they function as necessary.
+// Create a variable, playerBoard, set to generatePlayerBoard() with 3 and 4 as its
+// two parameters. */
+// let playerBoard = generatePlayerBoard(3, 4);
+//
+// /* Create a variable, bombBoard, set to generateBombBoard() with 3, 4 and 5 as
+// its three parameters. */
+// let bombBoard = generateBombBoard(3, 4, 5);
+//
+// /* Print both boards to the console.
+// Log a message to the console. */
+// console.log('Player Board: ');
+//
+// /* Call the printBoard() function and pass in the playerBoard variable as the
+// argument. */
+// printBoard(playerBoard);
+//
+// // Log a message to the console.
+// console.log('Bomb Board: ');
+//
+// /* Call the printBoard() function and pass in the bombBoard variable as the
+// argument. */
+// printBoard(bombBoard);
+//
+// /* Test out the functions, flipTile() and ....
+// Call the flipTile() function. Pass in playerBoard, bombBoard, 0, and 0 as
+// parameters.
+// (This will flip the tile at location [0,0] on the player board, and also check
+// the bomb board for bombs at the location). */
+// flipTile(playerBoard, bombBoard, 0, 0);
+//
+// /* log a message that says 'Updated Player Board:'. This will help you read the
+// output clearly. */
+// console.log('Updated Player Board:');
+//
+// /* Print out the player board to see flipTile() in action.
+// Call the printBoard() function and pass in playerBoard as an argument. */
+// printBoard(playerBoard);
 
-/* Create a variable, bombBoard, set to generateBombBoard() with 3, 4 and 5 as
-its three parameters. */
-let bombBoard = generateBombBoard(3, 4, 5);
 
-/* Print both boards to the console.
-Log a message to the console. */
-console.log('Player Board: ');
 
-/* Call the printBoard() function and pass in the playerBoard variable as the
-argument. */
-printBoard(playerBoard);
+/* --------------------------------------------------------- */
 
-// Log a message to the console.
-console.log('Bomb Board: ');
-
-/* Call the printBoard() function and pass in the bombBoard variable as the
-argument. */
-printBoard(bombBoard);
-
-/* Test out the functions, flipTile() and ....
-Call the flipTile() function. Pass in playerBoard, bombBoard, 0, and 0 as
-parameters.
-(This will flip the tile at location [0,0] on the player board, and also check
-the bomb board for bombs at the location). */
-flipTile(playerBoard, bombBoard, 0, 0);
-
-/* log a message that says 'Updated Player Board:'. This will help you read the
-output clearly. */
-console.log('Updated Player Board:');
-
-/* Print out the player board to see flipTile() in action.
-Call the printBoard() function and pass in playerBoard as an argument. */
-printBoard(playerBoard);
+/* Instantiate the Game class (to try the classes and the methods out).
+Create a constant, g and instantiate a new Game. The game should be a 3 x 3
+board, with a total of 3 bombs on the board. */
+const g = new Game(3, 3, 3);
