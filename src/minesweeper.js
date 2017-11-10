@@ -117,7 +117,16 @@ class Board {
     return this._numberOfTiles !== this._numberOfBombs;
   }
 
-
+  /*  A .print() method to print the formatted this._playerBoard instance
+  property. */
+  print() {
+    /* This .map() method returns an array of formatted rows. Also, chain a
+    .join() method call onto your .map() method call (with '\n' as the separator)
+    to join together the array of rows with new lines, placing each row on its own
+    line when printed. Then wrap this line of code with console.log() in order to
+    log the formatted board to the console. */
+    console.log(this._playerBoard.map(row => row.join(' | ')).join('\n'));
+  }
 
 
 
@@ -213,16 +222,7 @@ const generateBombBoard = (numberOfRows, numberOfColumns, numberOfBombs) => {
 
 
 
-/*  Create a constant variable, printBoard, set to to an arrow function that
-accepts one parameter, board. */
-const printBoard = board => {
-  /* This .map() method returns an array of formatted rows. Also, chain a
-  .join() method call onto your .map() method call (with '\n' as the separator)
-  to join together the array of rows with new lines, placing each row on its own
-  line when printed. Then wrap this line of code with console.log() in order to
-  log the formatted board to the console. */
-  console.log(board.map(row => row.join(' | ')).join('\n'));
-};
+
 
 /* Test the functions to make sure they function as necessary.
 Create a variable, playerBoard, set to generatePlayerBoard() with 3 and 4 as its
