@@ -1,12 +1,24 @@
+/* The Game class utilizes the Board class by making calls to the methods in
+the Board class. */
+class Game {
+
+
+}
+
+
+
+
+/* The Board class contains all of the functionalities of creating player boards,
+game boards, and printing the boards. */
 class Board {
   /* Add a constructor() method for the class, to be able to use the class later
   (as an object)
-  The parameters represent the board size and the number of bombs. */
+  The parameters represent the board size and the number of bombs on the board. */
   constructor(numberOfRows, numberOfColumns, numberOfBombs) {
     // set an instance's properties.
     this._numberOfBombs = numberOfBombs;
     this._numberOfTiles = numberOfRows * numberOfColumns; // represents the size of the game board
-    // instance property with value set to a static method called on Board
+    // instance property set to the value of a static method called on Board
     this._playerBoard = Board.generatePlayerBoard(numberOfRows, numberOfColumns);
     this._bombBoard = Board.generateBombBoard(numberOfRows, numberOfColumns, numberOfBombs);
   }
