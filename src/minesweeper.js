@@ -16,7 +16,7 @@ class Game {
   or lose). */
   playMove(rowIndex, columnIndex) {
     // start by flipping a specified tile when .playMove() is called.
-    this.board.flipTile(rowIndex, columnIndex);
+    this._board.flipTile(rowIndex, columnIndex);
 
     /* The logic that determines what should happen after a player flips a tile.
     if statement checks if the playerBoard provided by this._board has a B at
@@ -319,3 +319,6 @@ class Board {
 Create a constant, g and instantiate a new Game. The game should be a 3 x 3
 board, with a total of 3 bombs on the board. */
 const g = new Game(3, 3, 3);
+
+// Play a move.
+g.playMove(0, 0);
