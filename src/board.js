@@ -1,7 +1,6 @@
-
-
 /* The Board class contains all of the functionality of creating player boards,
-game boards, and printing the boards. */
+game boards, and printing the boards. Exporting the Board class,
+using `export as declared` syntax. */
 export class Board {
   /* Add a constructor() method for the class, to be able to use the class later
   (as an object)
