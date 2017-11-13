@@ -1,6 +1,8 @@
-/* The Board class contains all of the functionalities of creating player boards,
+
+
+/* The Board class contains all of the functionality of creating player boards,
 game boards, and printing the boards. */
-class Board {
+export class Board {
   /* Add a constructor() method for the class, to be able to use the class later
   (as an object)
   The parameters represent the board size and the number of bombs on the board. */
