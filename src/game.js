@@ -1,3 +1,7 @@
+/* import the Board class from the board.js file (it into game.js) so that the
+code in this file, game.js can access it and function properly. */
+import { Board } from './board';
+
 /* The Game class utilizes the Board class by making calls to the methods in
 the Board class. */
 class Game {
