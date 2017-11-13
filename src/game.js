@@ -1,3 +1,14 @@
+// To play Minesweeper, we will create instances of MineSweeperGame in command line.
+// For example:
+// In the command line, navigate to the lib directory and run `node`
+// Run `.load game.js` to load the contents of this file.
+// Then create a Game instance and run commands like so:
+// let game = new Game(3, 3, 3);
+// game.playMove(0, 1);
+// game.playMove(1, 2);
+// When done run `.exit`
+
+
 /* import the Board class from the board.js file, in the same directory, ./
 (i.e. src/), (into the game.js file) so that the code in this file, game.js,
 can access it and function properly. */
